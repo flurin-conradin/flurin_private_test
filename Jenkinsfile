@@ -6,7 +6,7 @@ pipeline {
         stage('creating_venv') {
             steps {
                 sh 'printenv'
-                githubNotify description: 'This is a shorted example',  status: 'SUCCESS', repo: 'test_github_notification', credentialsId:'flurin-conradin-notify-github2', account: 'flurin-conradin', sha: GIT_COMMIT  
+                githubNotify description: 'This is a shorted example',  status: 'SUCCESS', repo: 'test_github_notification', credentialsId:'flurin-conradin-notify-github', account: 'flurin-conradin', sha: GIT_COMMIT  
             }
         }
     }
