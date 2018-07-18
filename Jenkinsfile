@@ -12,10 +12,10 @@ pipeline {
                 echo "${DEPLOY_BETA}"
             }
         }
-        when {
-             expression { params.DEPLOY_BETA == true }
-        }
         stage('deploy_to_beta') {
+            when {
+                expression { params.DEPLOY_BETA == true }
+            }
             steps {
                 sh 'printenv'
                 echo "deploying to beta"
