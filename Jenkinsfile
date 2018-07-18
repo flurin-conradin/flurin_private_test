@@ -15,7 +15,7 @@ pipeline {
         when {
              expression { params.DEPLOY_BETA == true }
         }
-        stage('creating_venv') {
+        stage('deploy_to_beta') {
             steps {
                 sh 'printenv'
                 echo "deploying to beta"
