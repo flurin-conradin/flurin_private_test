@@ -6,6 +6,7 @@ pipeline {
         stage('creating_venv') {
             steps {
                 sh 'printenv'
+            }
         }
     }
 }
