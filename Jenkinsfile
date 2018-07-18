@@ -9,6 +9,7 @@ pipeline {
         stage('creating_venv') {
             steps {
                 sh 'printenv'
+                echo ${deploy_beta}
             }
         }
     }
